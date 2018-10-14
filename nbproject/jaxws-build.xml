@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?><!--
+        *** GENERATED FROM jax-ws.xml - DO NOT EDIT !                             ***
+        *** TO MODIFY wsimport options USE Web Service node -> Edit WS Attributes ***
+        *** TO CHANGE TARGETS GENERATED TO jaxws-build.xml COPY THOSE             ***
+        *** TARGETS TO ../build.xml AND MODIFY THAT FILE INSTEAD                  ***
+
+        --><project xmlns:xalan="http://xml.apache.org/xslt" xmlns:j2seproject3="http://www.netbeans.org/ns/j2se-project/3" xmlns:jaxws="http://www.netbeans.org/ns/jax-ws/1">
+    <!--
+                ===================
+                JAX-WS WSIMPORT SECTION
+                ===================
+            -->
+    <target name="wsimport-init" depends="init">
+        <mkdir dir="${build.generated.sources.dir}/jax-ws"/>
+        <taskdef name="wsimport" classname="com.sun.tools.ws.ant.WsImport">
+            <classpath path="${libs.jaxws21.classpath}"/>
+        </taskdef>
+    </target>
+    <target name="wsimport-client-WebServiceCurso" depends="wsimport-init">
+        <mkdir dir="${build.generated.dir}/jax-wsCache/WebServiceCurso"/>
+        <property name="wsdl-WebServiceCurso" location="xml-resources/web-service-references/WebServiceCurso/wsdl/35.197.30.148_8080/AyD2F3/WebServiceCurso.wsdl"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/WebServiceCurso" destdir="${build.generated.dir}/jax-wsCache/WebServiceCurso" wsdl="${wsdl-WebServiceCurso}" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="http://35.197.30.148:8080/AyD2F3/WebServiceCurso?wsdl" xnocompile="true" xendorsed="true" package="formSoap">
+            <depends file="${wsdl-WebServiceCurso}"/>
+            <produces dir="${build.generated.dir}/jax-wsCache/WebServiceCurso"/>
+        </wsimport>
+        <copy todir="${build.generated.sources.dir}/jax-ws">
+            <fileset dir="${build.generated.dir}/jax-wsCache/WebServiceCurso">
+                <include name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="wsimport-client-clean-WebServiceCurso" depends="-init-project">
+        <delete dir="${build.generated.dir}/jax-wsCache/WebServiceCurso"/>
+        <delete dir="${build.generated.sources.dir}/jax-ws/formSoap"/>
+    </target>
+    <target name="wsimport-client-ABCCursos" depends="wsimport-init">
+        <mkdir dir="${build.generated.dir}/jax-wsCache/ABCCursos"/>
+        <property name="wsdl-ABCCursos" location="xml-resources/web-service-references/ABCCursos/wsdl/35.197.30.148_8080/AyD2F3/ABCCursos.wsdl"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/ABCCursos" destdir="${build.generated.dir}/jax-wsCache/ABCCursos" wsdl="${wsdl-ABCCursos}" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="http://35.197.30.148:8080/AyD2F3/ABCCursos?wsdl" xnocompile="true" xendorsed="true" package="abCurso">
+            <depends file="${wsdl-ABCCursos}"/>
+            <produces dir="${build.generated.dir}/jax-wsCache/ABCCursos"/>
+        </wsimport>
+        <copy todir="${build.generated.sources.dir}/jax-ws">
+            <fileset dir="${build.generated.dir}/jax-wsCache/ABCCursos">
+                <include name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="wsimport-client-clean-ABCCursos" depends="-init-project">
+        <delete dir="${build.generated.dir}/jax-wsCache/ABCCursos"/>
+        <delete dir="${build.generated.sources.dir}/jax-ws/abCurso"/>
+    </target>
+    <target name="wsimport-client-generate" depends="wsimport-client-WebServiceCurso, wsimport-client-ABCCursos"/>
+</project>
