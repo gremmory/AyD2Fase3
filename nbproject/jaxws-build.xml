@@ -50,5 +50,22 @@
         <delete dir="${build.generated.dir}/jax-wsCache/ABCCursos"/>
         <delete dir="${build.generated.sources.dir}/jax-ws/abCurso"/>
     </target>
-    <target name="wsimport-client-generate" depends="wsimport-client-WebServiceCurso, wsimport-client-ABCCursos"/>
+    <target name="wsimport-client-Reporte" depends="wsimport-init">
+        <mkdir dir="${build.generated.dir}/jax-wsCache/Reporte"/>
+        <property name="wsdl-Reporte" location="xml-resources/web-service-references/Reporte/wsdl/35.197.30.148_8080/AyD2F3/Reporte.wsdl"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/Reporte" destdir="${build.generated.dir}/jax-wsCache/Reporte" wsdl="${wsdl-Reporte}" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="http://35.197.30.148:8080/AyD2F3/Reporte?wsdl" xnocompile="true" xendorsed="true" package="report">
+            <depends file="${wsdl-Reporte}"/>
+            <produces dir="${build.generated.dir}/jax-wsCache/Reporte"/>
+        </wsimport>
+        <copy todir="${build.generated.sources.dir}/jax-ws">
+            <fileset dir="${build.generated.dir}/jax-wsCache/Reporte">
+                <include name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="wsimport-client-clean-Reporte" depends="-init-project">
+        <delete dir="${build.generated.dir}/jax-wsCache/Reporte"/>
+        <delete dir="${build.generated.sources.dir}/jax-ws/report"/>
+    </target>
+    <target name="wsimport-client-generate" depends="wsimport-client-WebServiceCurso, wsimport-client-ABCCursos, wsimport-client-Reporte"/>
 </project>

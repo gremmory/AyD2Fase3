@@ -45,7 +45,7 @@ public class messagesError {
                 JOptionPane.showMessageDialog(null, "Se encontro un error en la busqueda", operation, JOptionPane.ERROR_MESSAGE);
                 break;
             default:
-                JOptionPane.showMessageDialog(null, "Busqueda Terminada", operation, JOptionPane.INFORMATION_MESSAGE);
+                //JOptionPane.showMessageDialog(null, "Busqueda Terminada", operation, JOptionPane.INFORMATION_MESSAGE);
                 return true;
         }
         return false;

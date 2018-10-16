@@ -4,4 +4,6 @@
     <system systemId="http://35.197.30.148:8080/AyD2F3/WebServiceCurso?xsd=1" uri="wsdl/35.197.30.148_8080/AyD2F3/WebServiceCurso.xsd_1.xsd"/>
     <system systemId="http://35.197.30.148:8080/AyD2F3/ABCCursos?wsdl" uri="wsdl/35.197.30.148_8080/AyD2F3/ABCCursos.wsdl"/>
     <system systemId="http://35.197.30.148:8080/AyD2F3/ABCCursos?xsd=1" uri="wsdl/35.197.30.148_8080/AyD2F3/ABCCursos.xsd_1.xsd"/>
+    <system systemId="http://35.197.30.148:8080/AyD2F3/Reporte?wsdl" uri="wsdl/35.197.30.148_8080/AyD2F3/Reporte.wsdl"/>
+    <system systemId="http://35.197.30.148:8080/AyD2F3/Reporte?xsd=1" uri="wsdl/35.197.30.148_8080/AyD2F3/Reporte.xsd_1.xsd"/>
 </catalog>

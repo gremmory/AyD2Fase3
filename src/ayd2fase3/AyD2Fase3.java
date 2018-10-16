@@ -5,6 +5,8 @@
  */
 package ayd2fase3;
 
+import formSoap.mainform;
+
 /**
  *
  * @author Jose
@@ -16,6 +18,7 @@ public class AyD2Fase3 {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        new mainform().setVisible(true);
     }
     
 }
