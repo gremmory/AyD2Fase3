@@ -5,6 +5,10 @@
  */
 package formSoap;
 
+import formRest.ListProfessor;
+import formRest.ListUser;
+import formRest.MainLogin;
+
 /**
  *
  * @author Jose
@@ -30,10 +34,12 @@ public class mainform extends javax.swing.JFrame {
         jMenuItem3 = new javax.swing.JMenuItem();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
-        jMenuItem1 = new javax.swing.JMenuItem();
-        jMenuItem2 = new javax.swing.JMenuItem();
+        jMenuItemAgregar = new javax.swing.JMenuItem();
+        jMenuItemEliminar = new javax.swing.JMenuItem();
         jMenu4 = new javax.swing.JMenu();
         jMenuItem5 = new javax.swing.JMenuItem();
+        jMenuItemCatedraticos = new javax.swing.JMenuItem();
+        jMenuItemUsers = new javax.swing.JMenuItem();
         jMenu5 = new javax.swing.JMenu();
         jMenuItem4 = new javax.swing.JMenuItem();
 
@@ -43,21 +49,21 @@ public class mainform extends javax.swing.JFrame {
 
         jMenu1.setText("Curso");
 
-        jMenuItem1.setText("Agregar");
-        jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
+        jMenuItemAgregar.setText("Agregar");
+        jMenuItemAgregar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem1ActionPerformed(evt);
+                jMenuItemAgregarActionPerformed(evt);
             }
         });
-        jMenu1.add(jMenuItem1);
+        jMenu1.add(jMenuItemAgregar);
 
-        jMenuItem2.setText("Eliminar");
-        jMenuItem2.addActionListener(new java.awt.event.ActionListener() {
+        jMenuItemEliminar.setText("Eliminar");
+        jMenuItemEliminar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem2ActionPerformed(evt);
+                jMenuItemEliminarActionPerformed(evt);
             }
         });
-        jMenu1.add(jMenuItem2);
+        jMenu1.add(jMenuItemEliminar);
 
         jMenuBar1.add(jMenu1);
 
@@ -70,6 +76,22 @@ public class mainform extends javax.swing.JFrame {
             }
         });
         jMenu4.add(jMenuItem5);
+
+        jMenuItemCatedraticos.setText("Listado Catedráticos");
+        jMenuItemCatedraticos.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItemCatedraticosActionPerformed(evt);
+            }
+        });
+        jMenu4.add(jMenuItemCatedraticos);
+
+        jMenuItemUsers.setText("Listado Usuarios");
+        jMenuItemUsers.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItemUsersActionPerformed(evt);
+            }
+        });
+        jMenu4.add(jMenuItemUsers);
 
         jMenuBar1.add(jMenu4);
 
@@ -91,7 +113,7 @@ public class mainform extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGap(0, 432, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -101,15 +123,15 @@ public class mainform extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
+    private void jMenuItemAgregarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemAgregarActionPerformed
         // TODO add your handling code here:
         new createCourse().setVisible(true);
-    }//GEN-LAST:event_jMenuItem1ActionPerformed
+    }//GEN-LAST:event_jMenuItemAgregarActionPerformed
 
-    private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
+    private void jMenuItemEliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemEliminarActionPerformed
         // TODO add your handling code here:
         new deleteCourse().setVisible(true);
-    }//GEN-LAST:event_jMenuItem2ActionPerformed
+    }//GEN-LAST:event_jMenuItemEliminarActionPerformed
 
     private void jMenuItem5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem5ActionPerformed
         // TODO add your handling code here:
@@ -120,6 +142,18 @@ public class mainform extends javax.swing.JFrame {
         // TODO add your handling code here:
         new reportCT().setVisible(true);
     }//GEN-LAST:event_jMenuItem4ActionPerformed
+
+    private void jMenuItemCatedraticosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemCatedraticosActionPerformed
+        // TODO add your handling code here:
+        new ListProfessor().setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_jMenuItemCatedraticosActionPerformed
+
+    private void jMenuItemUsersActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemUsersActionPerformed
+        // TODO add your handling code here:
+        new ListUser().setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_jMenuItemUsersActionPerformed
 
     /**
      * @param args the command line arguments
@@ -161,10 +195,12 @@ public class mainform extends javax.swing.JFrame {
     private javax.swing.JMenu jMenu4;
     private javax.swing.JMenu jMenu5;
     private javax.swing.JMenuBar jMenuBar1;
-    private javax.swing.JMenuItem jMenuItem1;
-    private javax.swing.JMenuItem jMenuItem2;
     private javax.swing.JMenuItem jMenuItem3;
     private javax.swing.JMenuItem jMenuItem4;
     private javax.swing.JMenuItem jMenuItem5;
+    private javax.swing.JMenuItem jMenuItemAgregar;
+    private javax.swing.JMenuItem jMenuItemCatedraticos;
+    private javax.swing.JMenuItem jMenuItemEliminar;
+    private javax.swing.JMenuItem jMenuItemUsers;
     // End of variables declaration//GEN-END:variables
 }

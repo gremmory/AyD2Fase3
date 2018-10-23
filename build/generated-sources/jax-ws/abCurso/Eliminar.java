@@ -7,9 +7,9 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Java class for eliminar complex type.
+ * <p>Clase Java para eliminar complex type.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>El siguiente fragmento de esquema especifica el contenido que se espera que haya en esta clase.
  * 
  * <pre>
  * &lt;complexType name="eliminar">
@@ -34,7 +34,7 @@ public class Eliminar {
     protected int codigo;
 
     /**
-     * Gets the value of the codigo property.
+     * Obtiene el valor de la propiedad codigo.
      * 
      */
     public int getCodigo() {
@@ -42,7 +42,7 @@ public class Eliminar {
     }
 
     /**
-     * Sets the value of the codigo property.
+     * Define el valor de la propiedad codigo.
      * 
      */
     public void setCodigo(int value) {

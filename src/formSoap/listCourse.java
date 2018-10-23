@@ -5,6 +5,11 @@
  */
 package formSoap;
 
+import formRest.Professor;
+import formRest.ProfessorRest;
+import formRest.UpdateCourseWeb;
+import formRest.WebCourse;
+import formRest.WebCourseRest;
 import java.util.ArrayList;
 import java.util.List;
 import javax.swing.JOptionPane;
@@ -41,6 +46,11 @@ public class listCourse extends javax.swing.JFrame {
         jButton1 = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        jTable2 = new javax.swing.JTable();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jButton2 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
@@ -64,6 +74,30 @@ public class listCourse extends javax.swing.JFrame {
         ));
         jScrollPane1.setViewportView(jTable1);
 
+        jTable2.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {},
+                {},
+                {},
+                {}
+            },
+            new String [] {
+
+            }
+        ));
+        jScrollPane2.setViewportView(jTable2);
+
+        jLabel1.setText("BD Web");
+
+        jLabel2.setText("BD Escritorio");
+
+        jButton2.setText("Modificar Curso");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -71,10 +105,17 @@ public class listCourse extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 547, Short.MAX_VALUE)
+                    .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 547, Short.MAX_VALUE)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jButton1)
-                        .addGap(0, 0, Short.MAX_VALUE))
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 548, Short.MAX_VALUE))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jButton1)
+                            .addComponent(jLabel2)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jLabel1)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(jButton2)))
+                        .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
@@ -82,9 +123,17 @@ public class listCourse extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jButton1)
+                .addGap(9, 9, 9)
+                .addComponent(jLabel2)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 296, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel1)
+                    .addComponent(jButton2))
+                .addGap(18, 18, 18)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 199, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(22, Short.MAX_VALUE))
         );
 
         pack();
@@ -112,7 +161,39 @@ public class listCourse extends javax.swing.JFrame {
         }catch(Exception e){
             JOptionPane.showMessageDialog(null, "Ocurrio un error..", "Listar Curso", JOptionPane.ERROR_MESSAGE);
         }
+        
+        
+        try{
+
+            List<WebCourse> res=null;// = new ArrayList<>();
+            //Object e = wsC.listacurso();
+            WebCourseRest cr = new WebCourseRest();
+            res = cr.dumpJSONElementCursosWeb(cr.cursosWebGet(),res);
+            if(res == null){
+                JOptionPane.showMessageDialog(null, "No existen Datos..", "Listar Curso", JOptionPane.ERROR_MESSAGE);
+            }
+            Object O[]=null;
+            DefaultTableModel model = (DefaultTableModel) this.jTable2.getModel();
+            JScrollPane scroll;
+            String headers[] = { "Codigo","Nombre", "Creditos" };
+            model.setColumnIdentifiers(headers);   
+            for (int i = 0; i < res.size(); i++) {
+                model.addRow(O);
+                model.setValueAt(String.valueOf(res.get(i).id_curso), i, 0);
+                model.setValueAt(String.valueOf(res.get(i).nombre), i, 1);
+                model.setValueAt(String.valueOf(res.get(i).creditos), i, 2);
+            }
+        }catch(Exception e){
+            JOptionPane.showMessageDialog(null, "Ocurrio un error..", "Listar Curso", JOptionPane.ERROR_MESSAGE);
+        }
+        
+        
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        // TODO add your handling code here:
+        new UpdateCourseWeb().setVisible(true);
+    }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -151,7 +232,12 @@ public class listCourse extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTable jTable1;
+    private javax.swing.JTable jTable2;
     // End of variables declaration//GEN-END:variables
 }

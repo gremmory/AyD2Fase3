@@ -8,9 +8,9 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Java class for buscarCurso_Id complex type.
+ * <p>Clase Java para buscarCurso_Id complex type.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>El siguiente fragmento de esquema especifica el contenido que se espera que haya en esta clase.
  * 
  * <pre>
  * &lt;complexType name="buscarCurso_Id">
@@ -36,7 +36,7 @@ public class BuscarCursoId {
     protected int idCurso;
 
     /**
-     * Gets the value of the idCurso property.
+     * Obtiene el valor de la propiedad idCurso.
      * 
      */
     public int getIdCurso() {
@@ -44,7 +44,7 @@ public class BuscarCursoId {
     }
 
     /**
-     * Sets the value of the idCurso property.
+     * Define el valor de la propiedad idCurso.
      * 
      */
     public void setIdCurso(int value) {

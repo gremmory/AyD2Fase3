@@ -6,6 +6,8 @@
 package ayd2fase3;
 
 import formSoap.mainform;
+import formRest.*;
+import java.util.List;
 
 /**
  *
@@ -18,7 +20,17 @@ public class AyD2Fase3 {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        new mainform().setVisible(true);
+ 
+        
+        new MainLogin().setVisible(true);
+        
+        //WebCourseRest w = new WebCourseRest();
+        //w.WebCoursePut("283", "Análisis y diseño de sistemas 1", "10");
+        
+        
+        //LoginRest d = new LoginRest();
+        //d.loginpost();
+
     }
     
 }

@@ -8,9 +8,9 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Java class for docenteCurso complex type.
+ * <p>Clase Java para docenteCurso complex type.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>El siguiente fragmento de esquema especifica el contenido que se espera que haya en esta clase.
  * 
  * <pre>
  * &lt;complexType name="docenteCurso">
@@ -57,7 +57,7 @@ public class DocenteCurso {
     protected String nombreU;
 
     /**
-     * Gets the value of the apellido property.
+     * Obtiene el valor de la propiedad apellido.
      * 
      * @return
      *     possible object is
@@ -69,7 +69,7 @@ public class DocenteCurso {
     }
 
     /**
-     * Sets the value of the apellido property.
+     * Define el valor de la propiedad apellido.
      * 
      * @param value
      *     allowed object is
@@ -81,7 +81,7 @@ public class DocenteCurso {
     }
 
     /**
-     * Gets the value of the creditos property.
+     * Obtiene el valor de la propiedad creditos.
      * 
      */
     public int getCreditos() {
@@ -89,7 +89,7 @@ public class DocenteCurso {
     }
 
     /**
-     * Sets the value of the creditos property.
+     * Define el valor de la propiedad creditos.
      * 
      */
     public void setCreditos(int value) {
@@ -97,7 +97,7 @@ public class DocenteCurso {
     }
 
     /**
-     * Gets the value of the cui property.
+     * Obtiene el valor de la propiedad cui.
      * 
      */
     public int getCui() {
@@ -105,7 +105,7 @@ public class DocenteCurso {
     }
 
     /**
-     * Sets the value of the cui property.
+     * Define el valor de la propiedad cui.
      * 
      */
     public void setCui(int value) {
@@ -113,7 +113,7 @@ public class DocenteCurso {
     }
 
     /**
-     * Gets the value of the idCurso property.
+     * Obtiene el valor de la propiedad idCurso.
      * 
      */
     public int getIdCurso() {
@@ -121,7 +121,7 @@ public class DocenteCurso {
     }
 
     /**
-     * Sets the value of the idCurso property.
+     * Define el valor de la propiedad idCurso.
      * 
      */
     public void setIdCurso(int value) {
@@ -129,7 +129,7 @@ public class DocenteCurso {
     }
 
     /**
-     * Gets the value of the idUsuario property.
+     * Obtiene el valor de la propiedad idUsuario.
      * 
      */
     public int getIdUsuario() {
@@ -137,7 +137,7 @@ public class DocenteCurso {
     }
 
     /**
-     * Sets the value of the idUsuario property.
+     * Define el valor de la propiedad idUsuario.
      * 
      */
     public void setIdUsuario(int value) {
@@ -145,7 +145,7 @@ public class DocenteCurso {
     }
 
     /**
-     * Gets the value of the nombreC property.
+     * Obtiene el valor de la propiedad nombreC.
      * 
      * @return
      *     possible object is
@@ -157,7 +157,7 @@ public class DocenteCurso {
     }
 
     /**
-     * Sets the value of the nombreC property.
+     * Define el valor de la propiedad nombreC.
      * 
      * @param value
      *     allowed object is
@@ -169,7 +169,7 @@ public class DocenteCurso {
     }
 
     /**
-     * Gets the value of the nombreU property.
+     * Obtiene el valor de la propiedad nombreU.
      * 
      * @return
      *     possible object is
@@ -181,7 +181,7 @@ public class DocenteCurso {
     }
 
     /**
-     * Sets the value of the nombreU property.
+     * Define el valor de la propiedad nombreU.
      * 
      * @param value
      *     allowed object is

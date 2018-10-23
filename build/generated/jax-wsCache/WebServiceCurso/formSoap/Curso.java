@@ -8,9 +8,9 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Java class for curso complex type.
+ * <p>Clase Java para curso complex type.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>El siguiente fragmento de esquema especifica el contenido que se espera que haya en esta clase.
  * 
  * <pre>
  * &lt;complexType name="curso">
@@ -42,7 +42,7 @@ public class Curso {
     protected String nombre;
 
     /**
-     * Gets the value of the creditos property.
+     * Obtiene el valor de la propiedad creditos.
      * 
      */
     public int getCreditos() {
@@ -50,7 +50,7 @@ public class Curso {
     }
 
     /**
-     * Sets the value of the creditos property.
+     * Define el valor de la propiedad creditos.
      * 
      */
     public void setCreditos(int value) {
@@ -58,7 +58,7 @@ public class Curso {
     }
 
     /**
-     * Gets the value of the idCurso property.
+     * Obtiene el valor de la propiedad idCurso.
      * 
      */
     public int getIdCurso() {
@@ -66,7 +66,7 @@ public class Curso {
     }
 
     /**
-     * Sets the value of the idCurso property.
+     * Define el valor de la propiedad idCurso.
      * 
      */
     public void setIdCurso(int value) {
@@ -74,7 +74,7 @@ public class Curso {
     }
 
     /**
-     * Gets the value of the nombre property.
+     * Obtiene el valor de la propiedad nombre.
      * 
      * @return
      *     possible object is
@@ -86,7 +86,7 @@ public class Curso {
     }
 
     /**
-     * Sets the value of the nombre property.
+     * Define el valor de la propiedad nombre.
      * 
      * @param value
      *     allowed object is
